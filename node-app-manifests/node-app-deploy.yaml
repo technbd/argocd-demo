@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app-deployment
+  labels:
+    app: node-app
+
+spec:
+  replicas: 2          # Tells Kubernetes to run 2 identical copies of this Pod
+  selector:
+    matchLabels:
+      app: node-app  # Tells the Deployment which Pods belong to it
+
+  template:
+    metadata:
+      labels:
+        app: node-app # This label must match the selector above
+
+    spec:
+      containers:
+      - name: node-app-container
+        image: technbd/node-app:1.1
+        ports:
+        - containerPort: 3000 
+        resources: {} 
+
+
