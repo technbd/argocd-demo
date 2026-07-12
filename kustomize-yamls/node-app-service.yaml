@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-deployment-svc
+  name: node-app-svc
   
 spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 80
+    targetPort: 3000
     #nodePort: 30081
 
   selector:
-    app: web-server
+    app: node-app
   type: ClusterIP     # NodePort or LoadBalancer
 
