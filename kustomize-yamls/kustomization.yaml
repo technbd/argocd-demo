@@ -9,4 +9,4 @@ resources:
   - node-app-service.yaml
 images:
   - name: technbd/node-app
-    newTag: "1.3"
+    newTag: "1.4"
