@@ -8,6 +8,6 @@ resources:
   - node-app-deploy.yaml
   - node-app-service.yaml
 images:
-  - name: technbd/node-app
+  - name: reg.technbd.com/library/node-app
     newTag: "1.1"
 
