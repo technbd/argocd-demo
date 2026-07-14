@@ -1,0 +1,13 @@
+## kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: demo
+#namePrefix: kustomize-
+
+resources:
+  - node-app-deploy.yaml
+  - node-app-service.yaml
+images:
+  - name: technbd/node-app
+    newTag: "1.1"
+
