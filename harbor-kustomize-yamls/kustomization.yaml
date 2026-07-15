@@ -10,4 +10,5 @@ resources:
 images:
   - name: reg.technbd.com/library/node-app
     newTag: "1.1"
-
+  - name: reg.technbd.com/node-app
+    newTag: "1.4"
